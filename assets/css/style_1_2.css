@@ -5,3 +5,72 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas: 
+    "one one one one"
+    "two two three three"
+    "two two four five";
+    gap: 10px;
+    margin: 10px;
+}
+
+.box1 {
+    background-color: red;
+    grid-area: one;
+}
+
+.box2 {
+    background-color: blue;
+    grid-area: two;
+}
+
+.box3 {
+    background-color: green;
+    grid-area: three;
+}
+
+.box4 {
+    background-color: darkmagenta;
+    grid-area: four;
+}
+
+.box5 {
+    background-color: darkmagenta;
+    grid-area: five;
+}
+
+article {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas: 
+    "eins eins zwei zwei"
+    "eins eins drei drei"
+    "vier vier vier vier";
+    gap: 10px;
+    margin: 10vh 10px 10px 10px;
+}
+
+.container1 {
+    background-color: yellow;
+    grid-area: eins;
+}
+
+.container2 {
+    background-color: red;
+    grid-area: zwei;
+}
+
+.container3 {
+    background-color: green;
+    grid-area: drei;
+}
+
+.container4 {
+    background-color: blue;
+    grid-area: vier;
+}
