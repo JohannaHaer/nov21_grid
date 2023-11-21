@@ -60,7 +60,6 @@ body {
     display: grid;
     grid-template-columns: 8fr 2fr;
     grid-template-rows: 15vh 85vh;
-    gap: 5%;
     grid-template-areas: 
     "header header"
     "main aside";
@@ -87,6 +86,66 @@ header {
 
 aside {
     grid-area: aside;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr repeat(3, 3fr);
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    grid-template-areas:
+    "sponsors" 
+    "add__example"
+    "add__knives"
+    "add__ikea";
+}
+
+.sponsors {
+    grid-area: sponsors;
+    display: flex;
+    justify-content: center;
+}
+
+.add__example {
+    grid-area: add__example;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    border: 5px solid black;
+}
+
+.add__knives {
+    grid-area: add__knives;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 5px solid black;
+}
+
+.add__knives button {
+    background-color: none;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    font-size: var(--font-size-button);
+}
+
+.add__ikea {
+    grid-area: add__ikea;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
 }
 
 main {
