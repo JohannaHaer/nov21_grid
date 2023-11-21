@@ -1,7 +1,169 @@
 /* Global Styling */
 
+@font-face {
+    font-family: 'Cormorant_Garamond';
+    src: url('../fonts/Cormorant_Garamond/CormorantGaramond-Light.ttf');
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Cormorant_Garamond';
+}
+
+:root {
+    --font-size-h1: 2.8rem;
+    --font-size-h2: 2.2rem;
+    --font-size-h3: 1.5rem;
+    --font-size-p: 1rem;
+    --font-size-button: 1.25rem;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+p {
+    font-size: var(--font-size-p);
+}
+
+.bild img {
+    width: 470px;
+    height: auto;
+}
+
+.add__ikea img {
+    width: 167px;
+    height: auto;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    width: 80vw;
+
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    grid-template-rows: 15vh 85vh;
+    gap: 5%;
+    grid-template-areas: 
+    "header header"
+    "main aside";
+    background-color:#E9E9E0;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.infos {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    padding: 7px 0;
+}
+
+aside {
+    grid-area: aside;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 9fr;
+    gap: 1rem;
+    grid-template-areas: 
+    "headline headline"
+    "beitraege bild";
+}
+
+.headline {
+    grid-area: headline;
+    display: flex;
+    justify-content: center;
+}
+
+.bild {
+    grid-area: bild;
+}
+
+.beitraege {
+    grid-area: beitraege;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    grid-template-areas: 
+    "column1 column2";
+}
+
+.column1 {
+    grid-area: column1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 3fr;
+    gap: 1rem;
+    grid-template-areas: 
+    "shatter"
+    "knife"
+    "contact";
+}
+
+.column2 {
+    grid-area: column2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 3fr;
+    gap: 1rem;
+    grid-template-areas: 
+    "microwave"
+    "cooking"
+    "death";
+}
+
+.shatter {
+    grid-area: shatter;
+}
+
+.knife {
+    grid-area: knife;
+}
+
+.contact {
+    grid-area: contact;
+}
+
+.microwave {
+    grid-area: microwave;
+}
+
+.cooking {
+    grid-area: cooking;
+}
+
+.death {
+    grid-area: death;
 }
