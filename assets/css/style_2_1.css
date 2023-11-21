@@ -1,0 +1,93 @@
+/* Global Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px;
+    grid-template-areas: 
+    "picture1 picture2 picture3"
+    "picture4 picture5 picture6"
+    "picture7 picture8 picture9";
+}
+
+section .hover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: contain;
+}
+
+.picture1 {
+    background-image: url('https://picsum.photos/500?1');
+    grid-area: picture1;
+}
+
+.picture2 {
+    background-image: url('https://picsum.photos/500?2');
+    grid-area: picture2;
+}
+
+.picture3 {
+    background-image: url('https://picsum.photos/500?3');
+    grid-area: picture3;
+}
+
+.picture4 {
+    background-image: url('https://picsum.photos/500?4');
+    grid-area: picture4;
+}
+
+.picture5 {
+    background-image: url('https://picsum.photos/500?5');
+    grid-area: picture5;
+}
+
+.picture6 {
+    background-image: url('https://picsum.photos/500?6');
+    grid-area: picture6;
+}
+
+.picture7 {
+    background-image: url('https://picsum.photos/500?7');
+    grid-area: picture7;
+}
+
+.picture8 {
+    background-image: url('https://picsum.photos/500?8');
+    grid-area: picture8;
+}
+
+.picture9 {
+    background-image: url('https://picsum.photos/500?9');
+    grid-area: picture9;
+}
+
+.hover {
+    position: relative;
+}
+
+.hover p {
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translateY(50%);
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hover:hover p {
+    display: flex;
+    transform: translateY(0);
+}
+
